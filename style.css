@@ -1,0 +1,231 @@
+:root {
+    --main-red: #be3144;
+    --main-white: #f0f0f0;
+    --main-blue: #45567d;
+    --main-gray: #303841;
+    --main-orange: #ffad1f;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+}
+.center {
+    text-align: center;
+    z-index: 0;
+    position: relative;
+    top: 50vh;
+    /*padding-top: 245px;
+    padding-bottom: 245px;*/
+}
+#navbar {
+    position: fixed;
+    width: 100%;
+    background-color: var(--main-red);
+    height: auto;
+    top: 0;
+    z-index: 9999;
+}
+#navbar ul{
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    margin-right: 25px;
+}
+li a {
+    text-decoration: none;
+    color: var(--main-white);
+    font-size: 22px;
+}
+li {
+    list-style: none;
+    padding: 20px 20px 20px 20px;
+
+}
+li:hover {
+    background-color: var(--main-orange);
+}
+#welcome-section {
+    background-color: black;
+    background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+    height: 100vh;
+}
+.center h1{
+    font-family: "Ubuntu", sans-serif;
+    color: var(--main-white);
+    font-size: 4rem;
+    margin: 0;
+    margin-left: 20px;
+}
+.center p {
+    color: var(--main-red);
+    font-style: italic;
+    font-size: 24px;
+    font-weight: lighter;
+    margin-top: 0.2vw;
+    opacity: 0;
+    
+}
+.center span {
+    margin-right: 20px;
+    margin-left: 20px;
+    opacity: 0;
+    color: #3a3d40;
+}
+.center:hover span {
+    animation-name: opa;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes opa {
+    100% {
+        opacity: 1;
+        color: var(--main-orange);
+    }
+}
+.center:hover p {
+    animation-name: opaa;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes opaa {
+    100% {
+        opacity: 1;
+        color: var(--main-red);
+    }
+}
+#projects {
+    background-color: var(--main-blue);
+    margin: 0;
+    text-align: center;
+    padding: 8rem 2rem;
+}
+#projects h2 {
+    max-width: 550px;
+    color: var(--main-white);
+    font-size: 2rem;
+    border-bottom: 1px solid var(--main-white);
+    margin: 0 auto;
+    margin-bottom: 70px;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.project-tile {
+    width: 370px;
+    border-radius: 2px;
+    color: var(--main-white);
+    background-color: var(--main-gray);
+    border-top: 2px solid var(--main-orange);
+    box-shadow: 1px 1px 7px rgba(48, 56, 65, 0.8);
+    margin-bottom: 50px;
+}
+.project-tile img {
+    width:100%;
+    object-fit: cover;
+    max-height: 90%;
+    height: 400px;
+}
+.project-title {
+    text-decoration: none;
+    color: var(--main-white);
+    font-size: 20px;
+}
+.project-title span {
+    margin-right: 5px;
+    margin-left: 5px;
+    opacity: 0;
+    color: var(--main-gray)
+}
+.project-tile:hover span {
+    animation-name: opa;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+}
+#no-cover {
+    object-fit: unset;
+}
+#button-all {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--main-white);
+    background-color: var(--main-gray);
+    margin-top: 20px;
+    padding: 10px 25px;
+    font-size: 22px;
+}
+#button-all span {
+    font-size: 22px;
+    margin-left: 10px;
+    font-weight: bolder;
+}
+#button-all:hover {
+    background-color: var(--main-red);
+}
+#button-all:hover span {
+    animation-name: arrow;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes arrow {
+    100% {
+        margin-left: 20px;
+    }
+}
+#contact {
+    background-color: var(--main-gray);
+    margin: 0;
+    text-align: center;
+    padding: 4rem 2rem;
+}
+#contact h2{
+    font-family: "Oswald";
+    margin: 0;
+    font-size: 72px;
+    font-weight: bold;
+    color: var(--main-white);
+}
+#contact p{
+    font-family: "Poppins";
+    color: var(--main-white);
+    font-style: italic;
+    font-size: 20px;
+    font-weight: lighter;
+    margin-top: 0.2vw;
+}
+.container-1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+#profile-link {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--main-white);
+    font-size: 24px;
+}
+.container-1 i {
+    margin-right: 10px;
+}
+#profile-link:hover {
+    animation-name: move;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes move {
+    100% {
+        margin-top: 10px;
+    }
+}
+@media(max-width:10px) {
+    .container {
+        display: flex;
+    }
+}
