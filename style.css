@@ -170,10 +170,16 @@ li:hover {
     color: var(--main-gray)
 }
 .project-tile:hover span {
-    animation-name: opa;
+    animation-name: opacity1;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in;
+}
+@keyframes opacity1 {
+    100% {
+        opacity: 1;
+        color: var(--main-orange);
+    }
 }
 #no-cover {
     object-fit: unset;
