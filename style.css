@@ -40,10 +40,11 @@ li a {
     text-decoration: none;
     color: var(--main-white);
     font-size: 22px;
+    padding: 0px 20px 0px 20px;
 }
 li {
     list-style: none;
-    padding: 20px 20px 20px 20px;
+    padding: 20px 0px 20px 0px;
 
 }
 li:hover {
@@ -74,24 +75,49 @@ li:hover {
     margin-right: 20px;
     margin-left: 20px;
     opacity: 0;
-    color: #3a3d40;
+    color: var(--main-orange);
 }
-.center:hover span {
+/*.center:hover span {
     animation-name: opa;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-}
+    animation-duration: 3s;
+}*/
 @keyframes opa {
     100% {
         opacity: 1;
-        color: var(--main-orange);
     }
 }
-.center:hover p {
+@keyframes opa1 {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes opa2 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes opa3 {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+/*.center:hover p {
     animation-name: opaa;
     animation-duration: 1s;
     animation-fill-mode: forwards;
-}
+}*/
 @keyframes opaa {
     100% {
         opacity: 1;
@@ -229,3 +255,28 @@ li:hover {
         display: flex;
     }
 }
+@keyframes opacity {
+    50% {
+        opacity: 1;
+    }
+}
+.content {
+    position: absolute;
+    display: none;
+    overflow: hidden;
+    background-color: var(--main-white);
+    margin-top: 20px;
+}
+.content a {
+    position: relative;
+    text-align: left;
+    color: black;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+}
+.link:hover .content {
+    display: flex;
+    flex-direction: column;
+    }
